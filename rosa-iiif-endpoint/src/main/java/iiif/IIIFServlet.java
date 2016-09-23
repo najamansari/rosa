@@ -117,7 +117,7 @@ public class IIIFServlet extends HttpServlet {
 
         String context = req.getContextPath();
         StringBuffer sb = req.getRequestURL();
-        String baseServletUri = req.getScheme() + "://" + req.getServerName() + ":" + req.getServerPort() + req.getServletPath() + req.getContextPath();
+        String baseServletUri = "https://" + req.getServerName() + req.getServletPath() + req.getContextPath();
         int i = sb.indexOf(context);
 
         if (i == -1) {

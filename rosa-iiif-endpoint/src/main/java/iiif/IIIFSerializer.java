@@ -118,7 +118,7 @@ public class IIIFSerializer {
         JSONObject root = new JSONObject();
             
 	    root.put("@context", "http://library.stanford.edu/iiif/image-api/1.1/context.json");
-        root.put("@id", baseUri.replace("http://", "https://") + "/" + URLEncoder.encode(info.getId()));
+        root.put("@id", baseUri + "/" + URLEncoder.encode(info.getId()));
         root.put("width", info.getWidth());
         root.put("height", info.getHeight());
 	    root.put("profile", "http://library.stanford.edu/iiif/image-api/1.1/compliance.html#level1");

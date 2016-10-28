@@ -108,7 +108,6 @@ public class IIIFServlet extends HttpServlet {
 
     protected void doGet(HttpServletRequest req, HttpServletResponse resp)
             throws ServletException, IOException {
-
         resp.addHeader(
                 "Link",
                 "<http://library.stanford.edu/iiif/image-api/1.1/compliance.html#level1>;rel=\"profile\"");

@@ -141,7 +141,6 @@ public class FSIServer implements ImageServer {
         if (req.getRotation() != 0.0) {
             throw new IIIFException("rotation unsupported", "rotation");
         }
-
         return url;
     }
 
@@ -167,7 +166,7 @@ public class FSIServer implements ImageServer {
         info.setQualities(Quality.NATIVE, Quality.COLOR);
         info.setFormats(ImageFormat.JPG, ImageFormat.PNG);
 
-        String url = baseurl + "?type=info&tpl=info";
+        String url = baseurl + "?type=info";
         url += "&" + param("source", image);
 
         DocumentBuilderFactory docFactory = DocumentBuilderFactory
